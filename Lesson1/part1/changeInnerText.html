@@ -1,3 +1,8 @@
+<!--
+* Author: Carlos Lopez
+* Description:  This is simply to exemplify how the users can actaully use XMTP
+* 
+-->
 <!DOCTYPE html>
 <html>
 <body>
@@ -7,11 +12,12 @@
 <div id="demo">
 <button type="button" onclick="loadXMLDoc()">Change Content</button>
 </div>
-
 <script>
 function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
+    //Here we xpect the code to 4 b/c it in xhttp it means ready
+    //200 is status ok
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("demo").innerHTML =
       this.responseText;
